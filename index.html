@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Totally Good Gamers </title>
-   <!--- google adsense script below---->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956320025992349"
-<!DOCTYPE html>
-<html>
-<head>
-  <title>TGG Movie</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Totally Good Gamers</title>
 
+  <!-- AdSense -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956320025992349"
     crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      cursor: pointer;
+      background: #111;
+      color: white;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      z-index: 999;
+    }
+  </style>
 </head>
 
-<body>
+<body onclick="startMusic()">
+
+  <!-- Click overlay -->
+  <div id="overlay">Click for Epic TGG swagginess!</div>
 
   <h1>TGG SML MOVIE THE TGG WOOHOO!</h1>
-  helloses poobies and nickies and blakies!
+  <p>helloses poobies and nickies and blakies!</p>
 
-  <!-- Google AdSense -->
+  <!-- AdSense -->
   <ins class="adsbygoogle"
        style="display:block"
        data-ad-client="ca-pub-6956320025992349"
@@ -33,15 +56,25 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
-  <!-- Hidden YouTube audio -->
+  <!-- Hidden YouTube player -->
   <div style="width:1px; height:1px; overflow:hidden; position:absolute; top:-10px; left:-10px;">
-    <iframe
-  src="https://www.youtube.com/embed/r_KrfgRyVD4?autoplay=1&mute=0&playsinline=1"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
-</iframe>
+    <iframe id="music"
+      src="https://www.youtube.com/embed/r_KrfgRyVD4?enablejsapi=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media">
+    </iframe>
   </div>
+
+  <script>
+    function startMusic() {
+      // remove overlay
+      document.getElementById("overlay").style.display = "none";
+
+      // start music WITH sound
+      document.getElementById("music").src =
+        "https://www.youtube.com/embed/r_KrfgRyVD4?autoplay=1&mute=0";
+    }
+  </script>
 
 </body>
 </html>
