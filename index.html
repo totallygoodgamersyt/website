@@ -5,84 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Totally Good Gamers</title>
 
-  <!-- AdSense -->
-  <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956320025992349"
-    crossorigin="anonymous"></script>
-
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 80px;
+      color: black;
       cursor: pointer;
-      background: #111;
-      color: white;
+      overflow: hidden;
     }
 
-    #overlay {
+    /* Background image */
+    .bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: black;
+      background-image: url("tgg-background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    /* Dark overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+
+    /* Content */
+    .content {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Click screen */
+    #clickOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 22px;
-      z-index: 999;
+      z-index: 10;
+    }
+
+    iframe {
+      display: none;
     }
   </style>
 </head>
 
 <body onclick="startMusic()">
 
-  <!-- Click overlay -->
-  <div id="overlay">Click for Epic TGG swagginess!</div>
+  <!-- Background -->
+  <div class="bg"></div>
+  
 
-  <h1>Totally Good Gamer : The Official Website </h1>
-  <p>coming as soon as Nick's lazy ass can code better!</p>
+  <!-- Click to start -->
+  <div id="clickOverlay">Click for Epic TGG Swagginess</div>
 
-   <!-- YouTube Channel Link -->
-  <p>
-    🔗 Visit our YouTube:
-    <a href="https://www.youtube.com/@TotallyGoodGamers" target="_blank">
-      Totally Good Gamers Channel
-    </a>
-  </p>
+  <!-- Content -->
+  <div class="content">
+    <h1>Totally Good Gamers : Official Website</h1>
+    <p>coming as soon as Nick stops being lazy 😎</p>
 
-  <!-- AdSense -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-6956320025992349"
-       data-ad-slot="YOUR_AD_SLOT_ID"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <!-- Hidden YouTube player -->
-  <div style="width:1px; height:1px; overflow:hidden; position:absolute; top:-10px; left:-10px;">
-    <iframe id="music"
-      src="https://www.youtube.com/embed/r_KrfgRyVD4?enablejsapi=1"
-      frameborder="0"
-      allow="autoplay; encrypted-media">
-    </iframe>
+    <p>
+      🔗 YouTube:
+      <a href="https://www.youtube.com/@YOUR_CHANNEL" target="_blank">
+        Totally Good Gamers Channel
+      </a>
+    </p>
   </div>
+
+  <!-- Hidden YouTube music -->
+  <iframe id="music"
+    src="https://www.youtube.com/embed/r_KrfgRyVD4?enablejsapi=1"
+    allow="autoplay; encrypted-media">
+  </iframe>
 
   <script>
     function startMusic() {
-      // remove overlay
-      document.getElementById("overlay").style.display = "none";
+      document.getElementById("clickOverlay").style.display = "none";
 
-      // start music WITH sound
       document.getElementById("music").src =
         "https://www.youtube.com/embed/r_KrfgRyVD4?autoplay=1&mute=0";
     }
   </script>
 
 </body>
-</html>
