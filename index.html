@@ -28,16 +28,33 @@
       z-index: -2;
     }
 
-    /* Dark overlay */
-    .overlay {
+    /* SHOP BUTTON */
+    .shop-btn {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.55);
-      z-index: -1;
+      top: 20px;
+      right: 20px;
+
+      background: black;
+      color: white;
+
+      padding: 12px 24px;
+      border-radius: 10px;
+
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+
+      transition: 0.3s ease;
+      z-index: 9999;
     }
+
+    .shop-btn:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    
 
     /* Content */
     .content {
@@ -46,7 +63,7 @@
     }
 
     a {
-      color: #ff4d4d;
+      color: black;
       text-decoration: none;
       font-weight: bold;
     }
@@ -80,7 +97,12 @@
 
   <!-- Background -->
   <div class="bg"></div>
-  
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- SHOP BUTTON -->
+  <a href="https://totallygoodgamers.shop/" class="shop-btn" target="_blank">Shop</a>
 
   <!-- Click to start -->
   <div id="clickOverlay">Click for Epic TGG Swagginess</div>
@@ -96,6 +118,7 @@
         Totally Good Gamers Channel
       </a>
     </p>
+
     <p>
       🔗 Discord:
       <a href="https://www.discord.gg/tggyt" target="_blank">
@@ -118,6 +141,11 @@
         "https://www.youtube.com/embed/r_KrfgRyVD4?autoplay=1&mute=0";
     }
   </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956320025992349"
-     crossorigin="anonymous"></script>
+
+  <!-- AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6956320025992349"
+    crossorigin="anonymous"></script>
+
 </body>
+</html>
