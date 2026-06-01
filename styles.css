@@ -53,7 +53,7 @@
     justify-content: center;
     gap: 40px;
 
-    margin-top: -340px;
+    margin-top: -320px;
 }
 .noah
 {
@@ -201,3 +201,20 @@ ul li a {
     iframe {
       display: none;
     }
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+@media screen and (max-width: 768px) {
+
+  .tgg-crew {
+    gap: 0;
+}
+
+.noah,
+.nick,
+.blake {
+    width: 40%;
+    margin: -25px;
+}
+}
