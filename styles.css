@@ -166,52 +166,46 @@ iframe {
 /* ================================= */
 /* MOBILE */
 /* ================================= */
-
 @media screen and (max-width: 768px) {
-
     .content {
-        padding-top: 5px;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 0;
     }
 
-    /* Smaller navbar */
     .topnav ul {
-        gap: 4px;
-        padding: 2px;
+        gap: 6px;
+        padding: 0;
     }
 
     .navicon {
-        width: 55px;
+        width: 70px;
         height: auto;
     }
 
-    /* Smaller logo */
     .logo {
-        width: 240px;
-        max-width: 75vw;
-
-        margin-top: 10px;
+        width: 170px;
+        max-width: 55vw;
+        margin-top: 40px;
     }
 
-    /* Crew closer together */
     .tgg-crew {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         gap: 0;
-        margin-top: -40px;
+        margin-top: -15px;
     }
 
     .noah,
     .nick,
     .blake {
-        width: 34%;
+        width: 35vw;
+        max-width: 150px;
         height: auto;
         object-fit: contain;
-    }
-
-    .noah {
-        margin-right: -15px;
-    }
-
-    .blake {
-        margin-left: -15px;
+        margin: 0 -8px;
     }
 
     #clickOverlay {
