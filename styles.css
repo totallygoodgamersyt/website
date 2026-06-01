@@ -207,14 +207,61 @@ ul li a {
 /* ================================= */
 @media screen and (max-width: 768px) {
 
-  .tgg-crew {
-    gap: 0;
-}
+    /* Smaller navigation bar */
+    .topnav ul {
+        gap: 2px;
+        padding: 5px;
+    }
 
-.noah,
-.nick,
-.blake {
-    width: 40%;
-    margin: -25px;
+    .topnav a {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    /* Smaller logo */
+    .logo {
+        width: 220px;
+        max-width: 70vw;
+        margin-top: 10px;
+    }
+
+    /* Crew section */
+    .tgg-crew {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0;
+        margin-top: -30px;
+        padding: 0;
+    }
+
+    /* Keep original aspect ratio */
+    .noah,
+    .nick,
+    .blake {
+        width: 38%;
+        height: auto;        /* prevents stretching */
+        object-fit: contain; /* preserves proportions */
+        margin: -15px;
+        max-width: none;
+    }
+
+    /* Optional overlap effect */
+    .noah {
+        margin-right: -25px;
+    }
+
+    .blake {
+        margin-left: -25px;
+    }
+
+    /* Overlay text */
+    #clickOverlay {
+        font-size: 18px;
+        text-align: center;
+        padding: 20px;
+    }
 }
 }
