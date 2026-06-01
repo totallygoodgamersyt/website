@@ -55,34 +55,26 @@
 
     margin-top: -320px;
 }
-.noah
-{
-    padding:left;
-    width: 500px;
-    height:500px;
+.noah,
+.nick,
+.blake {
+    width: 450px;
+    height: auto;      /* NOT 500px */
+    object-fit: contain;
+    transition: .3s;
 }
 .noah:hover
 {
    transform: translateY(-4px) scale(1.02);
   filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 } 
-.nick
-{
-    padding:right;
-    width: 500px;
-    height:500px;
-}
+
 .nick:hover
 {
    transform: translateY(-4px) scale(1.02);
   filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 } 
-.blake
-{
-    padding:center;
-    width: 500px;
-    height:500px;
-}
+
 .blake:hover
 {
     transform: translateY(-4px) scale(1.02);
